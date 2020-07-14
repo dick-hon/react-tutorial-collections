@@ -1,8 +1,8 @@
 import React from 'react';
 
-function App(){
+function App(props){
   return(
-    <button>大家好</button>
-  );
+      <button> {props.children} </button> 
+    );
 }
 export default App;

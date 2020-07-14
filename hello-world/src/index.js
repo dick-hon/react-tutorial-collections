@@ -2,28 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App'; // import the "App component from external .js"
+import Layout from './Layout';
 import * as serviceWorker from './serviceWorker';
 
-function Progress(){  // internal component
-  const barWidth="50%";
-  return(
-      <div>
-      <div className="progress-back" style={{backgroundColor:"rgba(0,0,0,0.2)",width:"200px",height:"7px",borderRadius:"10px"}}>
-        <div className="progress-bar" style={{backgroundColor:"#fe5196",width:barWidth,height:"100%",borderRadius:"10px"}}></div>
-      </div>
-    </div>
-  );
+const printMessage=()=>{
+  document.getElementById('show-area').innerHTML="我被按到了";
 }
 
 ReactDOM.render(
   <div>
-    <App/>
-    <Progress/>
-    <Progress/>
-    <Progress/>
-    <App/>
-    <App/>
-  </div>,
+    <Layout>
+      <App> 在index.js中設定文字 </App>
+    </Layout>
+    </div>,
   document.getElementById('root')
 );
 

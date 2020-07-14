@@ -1,10 +1,10 @@
-#### react-tutorial-collections
+## react-tutorial-collections
 
 ### Tutorial
 > https://ithelp.ithome.com.tw/articles/10214942
 
 ### Index
-## Fundamentel
+#### Fundamentel
 - React Dom
 - ES6
 - JSX
@@ -13,7 +13,7 @@
 - API
 - life cycle
 - router
-## Apple
+#### Apple
 - Material UI
 - Nav bar
 
@@ -33,43 +33,53 @@
 > - document.getElementById().scrollTop=....就是在修改元素在DOM的scrollTop。
 
 ### ES6
-## variable
+#### variable
 > <i>var</i> problem:
 > - var是全域(global)的，也就是即使在其他scope也會存在。
 > - 沒有辦法保護var，也就是「不能強制不能被改變」。
+>
 > Solutions
 > - let
 > - const 
-## function
+#### function
 ```
-    宣告型態 函式名稱 = (參數)=>{
-        函式定義
-    }
+宣告型態 函式名稱 = (參數)=>{
+   函式定義
+ }
 /* 舉例來說 */
-
-    var testFunction = (A, B)=>{
-        return A+B;
-    }
+ var testFunction = (A, B)=>{
+    return A+B;
+ }
 ```
-## spread operator {...}
+#### spread operator {...}
 > 把陣列/物件展開成個別元素
-## Promise 
+#### Promise 
 > 解決非同步問題 callback
 ```
-    宣告型態 宣告名稱 = new Promise((resolve, reject)=>{
-        定義要先做什麼事情
-        resolve(參數);
-    })
+宣告型態 宣告名稱 = new Promise((resolve, reject)=>{
+    定義要先做什麼事情
+    resolve(參數);
+})
 
-    宣告名稱.then((參數，由resolve丟出)=>{ 定義要後做什麼事情 }).catch((錯誤)=>{ 先做的事情出現錯誤時怎麼處理 }))
+宣告名稱.then((參數，由resolve丟出)=>{ 定義要後做什麼事情 }).catch((錯誤)=>{ 先做的事情出現錯誤時怎麼處理 }))
 
 /* 通常會這樣排版*/
 
-    宣告名稱
-    .then((參數，由resolve丟出)=>{ 
-        定義要後做什麼事情 
-    })
-    .catch((錯誤)=>{ 
-        先做的事情出現錯誤時怎麼處理 
-    }))
+宣告名稱
+.then((參數，由resolve丟出)=>{ 
+     定義要後做什麼事情 
+})
+ .catch((錯誤)=>{ 
+    先做的事情出現錯誤時怎麼處理 
+ }))
+```
+### Props
+> 而React把我們自製的component當中所有的attribute和其他用來控制元件的參數(像是button中的文字)整合成一個物件，稱為props
+```
+<App version="4" data="none"/>
+/* represent to */
+props:{
+    version: "4",
+    data: "none"
+}
 ```
