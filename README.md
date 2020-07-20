@@ -47,9 +47,9 @@
    函式定義
  }
 /* 舉例來說 */
- var testFunction = (A, B)=>{
+var testFunction = (A, B)=>{
     return A+B;
- }
+}
 ```
 #### spread operator {...}
 > 把陣列/物件展開成個別元素
@@ -69,9 +69,9 @@
 .then((參數，由resolve丟出)=>{ 
      定義要後做什麼事情 
 })
- .catch((錯誤)=>{ 
+.catch((錯誤)=>{ 
     先做的事情出現錯誤時怎麼處理 
- }))
+}))
 ```
 ### Props
 > 而React把我們自製的component當中所有的attribute和其他用來控制元件的參數(像是button中的文字)整合成一個物件，稱為props
